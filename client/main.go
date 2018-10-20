@@ -36,7 +36,7 @@ func main() {
 	// 根据用户输入，显示新的提示信息
 	if key == 1 {
 
-		fmt.Println("登录聊天室")
+		fmt.Println("欢迎登录聊天室")
 		// 用户要登录
 		fmt.Println("请输入用户id号")
 		fmt.Scanln(&userid)
@@ -46,7 +46,7 @@ func main() {
 		err := login.Login(userid, password)
 
 		if err != nil {
-			fmt.Println("登录失败")
+			fmt.Println(err.Error())
 		} else {
 			fmt.Println("登录成功")
 		}
