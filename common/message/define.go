@@ -1,8 +1,8 @@
 package message
 
 const (
-	TypeOfLoginMsg = "LoginMsgType"
-	TypeOfLoginResMsg = "LoginResMsgType"
+	TypeMessageLogin = "TypeMessageLogin"
+	TypeMessageLoginResponse = "TypeMessageLoginResponse"
 )
 
 type Message struct {
@@ -10,13 +10,12 @@ type Message struct {
 	Data string `json:"message_data"`// 消息
 }
 
-type MsgLogin struct {
+type MessageLogin struct {
 	UserId string `json:"user_id"`
 	Password string `json:"password"`
-	UesrName string `json:"user_name"`
 }
 
-type MsgLoginRes struct {
+type MessageLoginResponse struct {
 	Code int `json:"code"`
-	ErrorInfo string `json:"error_info"`
+	Info string `json:"info"`
 }
